@@ -1,19 +1,51 @@
-import logo from './modongo.jpg';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import './App.css';
-import { Button, Form} from 'react-bootstrap';
-import Primer_forms from './primer_forms.js';
-import { useState } from 'react';
-
+import Card from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import FormGroup from 'react-bootstrap/esm/FormGroup';
 function App() {
-  const [carroNombre, setCarro] = useState("Nombre");
-  return(
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo'/>
-        <Primer_forms
-         carroNombre="Altima"/>
-      </header>
-    </div>
-  )
+  return (
+    <Card>
+      <Card.Header className='header'>
+        <Card.Title>Registro de usuario</Card.Title>
+      </Card.Header>
+
+      <Card.Body>
+        <Form>
+        <Form.Group className="mb-3" controlId="formBasicName">
+            <Form.Label>Nombre</Form.Label>
+            <Form.Control type="text" placeholder="Ingresa tu nombre" />
+            
+            <Form.Label>Apellido Paterno</Form.Label>
+            <Form.Control type="text" placeholder="Ingresa tu apellido paterno" />
+          
+            <Form.Label>Apellido Materno</Form.Label>
+            <Form.Control type="text" placeholder="Ingresa tu apellido materno" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicUser">
+            <Form.Label>Nombre de Usuario</Form.Label>
+            <Form.Control type="text" placeholder="Ingresa tu nombre de usuario" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Contraseña</Form.Label>
+            <Form.Control type="password" placeholder="Ingresa tu contraseña" />
+
+            <Form.Label>Confirma tu Contraseña</Form.Label>
+            <Form.Control type="password" placeholder="Ingresa tu contraseña nuevamente" />
+            <Form.Text className="text-muted">
+              Nunca compartas tu contraseña con nadie más.
+            </Form.Text>
+          </Form.Group>
+
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+      </Card.Body>
+        </Card>
+  );
 }
 export default App;
