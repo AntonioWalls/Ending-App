@@ -1,38 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AgGridReact } from 'ag-grid-react';
+import axios from 'axios';
 import "ag-grid-community/styles/ag-grid.css"; 
 import "ag-grid-community/styles/ag-theme-quartz.css";
 
+
 const Grid = () => {
-  const [gridApi, setGridApi] = useState(null);
   const [rowData, setRowData] = useState([]);
 
-  const onGridReady = params => {
-    setGridApi(params.api);
-  };
-
   useEffect(() => {
-    fetch('./usuarios.json')
-      .then(response => response.json())
-      .then(data => {
-        setRowData(data);
+    axios.get('/usuarios.json')
+      .then(response => {
+        setRowData(response.data.usuarios);
+      })
+      .catch(error => {
+        console.error('Error:', error);
       });
   }, []);
 
+  const columnDefs = [
+    { headerName: "ID", field: "id" },
+    { headerName: "Nombre", field: "Nombre" },
+    { headerName: "Primer Apellido", field: "PrimerApellido" },
+    { headerName: "Segundo Apellido", field: "SegundoApellido" },
+    { headerName: "Correo", field: "Correo" },
+    { headerName: "Teléfono", field: "Telefono" },
+    { headerName: "Nombre de Usuario", field: "NombredeUsuario" }
+  ];
+
   return (
-    <div className="ag-theme-balham" style={{ height: '500px', width: '500px' }}>
-      <h1>Hello from ag-grid!</h1>
+    <div className="ag-theme-alpine" style={{ height: 600, width: 1400 }}>
       <AgGridReact
-        onGridReady={onGridReady}
         rowData={rowData}
-        columnDefs={[
-          {headerName: 'Id', field: 'make'},
-          {headerName: 'Model', field: 'model'},
-          {headerName: 'Price', field: 'price', editable: true}
-        ]}
-        enableSorting={true}
-        enableFilter={true}
-        pagination={true}
+        columnDefs={columnDefs}
       />
     </div>
   );
