@@ -5,13 +5,14 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-quartz.css";
 
 
+
 const Grid = () => {
   const [rowData, setRowData] = useState([]);
 
   useEffect(() => {
-    axios.get('/usuarios.json')
+    axios.get('https://jsonplaceholder.typicode.com/posts')
       .then(response => {
-        setRowData(response.data.usuarios);
+        setRowData(response.data);
       })
       .catch(error => {
         console.error('Error:', error);
@@ -19,22 +20,21 @@ const Grid = () => {
   }, []);
 
   const columnDefs = [
-    { headerName: "ID", field: "id" },
-    { headerName: "Nombre", field: "Nombre" },
-    { headerName: "Primer Apellido", field: "PrimerApellido" },
-    { headerName: "Segundo Apellido", field: "SegundoApellido" },
-    { headerName: "Correo", field: "Correo" },
-    { headerName: "Teléfono", field: "Telefono" },
-    { headerName: "Nombre de Usuario", field: "NombredeUsuario" }
+    { headerName: "UserId", field: "userId" },
+    { headerName: "Id", field: "id" },
+    { headerName: "Title", field: "title" },
+    { headerName: "Body", field: "body" },
+
   ];
 
   return (
-    <div className="ag-theme-alpine" style={{ height: 600, width: 1400 }}>
+        <div className="ag-theme-alpine" style={{ height: 600, width:900 }}>
       <AgGridReact
         rowData={rowData}
         columnDefs={columnDefs}
       />
     </div>
+
   );
 };
 
