@@ -3,7 +3,6 @@ import { AgGridReact } from 'ag-grid-react';
 import axios from 'axios';
 import "ag-grid-community/styles/ag-grid.css"; 
 import "ag-grid-community/styles/ag-theme-quartz.css";
-import './usuarios.json';
 
 
 
@@ -11,7 +10,7 @@ const Grid = () => {
   const [rowData, setRowData] = useState([]);
 
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/posts')
+    axios.get('http://187.189.158.186:7777/Usuario')
       .then(response => {
         setRowData(response.data);
       })
@@ -21,15 +20,21 @@ const Grid = () => {
   }, []);
 
   const columnDefs = [
-    { headerName: "UserId", field: "userId" },
-    { headerName: "Id", field: "id" },
-    { headerName: "Title", field: "title" },
-    { headerName: "Body", field: "body" },
+    { headerName: "idUsuario", field: "idUsuario" },
+    { headerName: "nombre", field: "nombre" },
+    { headerName: "primerApellido", field: "primerApellido" },
+    { headerName: "segundoApellido", field: "segundoApellido" },
+    { headerName: "fechaNacimiento", field: "fechaNacimiento"},
+    { headerName:"nombreUsuario", field: "nombreUsuario"},
+    { headerName:"contraseña", field: "contraseña"},
+    { headerName:"¿habilitado?", field: "habilitado"},
+    { headerName:"nombreCompleto", field: "nombreCompleto"},
+    { headerName:"strFechaNacimiento", field:"strFechaNacimiento"}
 
   ];
 
   return (
-        <div className="ag-theme-alpine" style={{ height: 600, width:900 }}>
+        <div className="ag-theme-quartz" style={{ height: 600, width:900 }}>
       <AgGridReact
         rowData={rowData}
         columnDefs={columnDefs}
