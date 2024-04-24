@@ -2,9 +2,12 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './App.css';
 import Card from 'react-bootstrap/Card';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import FormGroup from 'react-bootstrap/esm/FormGroup';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Grid from './Grid'
 function App() {
+
+
+
   return (
     <Card>
       <Card.Header className='header'>
@@ -43,9 +46,19 @@ function App() {
           <Button variant="primary" type="submit">
             Submit
           </Button>
+          
+          <Button onClick={Click} variant="primary" type="submit">
+            Regresar
+          </Button>
+
+
         </Form>
       </Card.Body>
         </Card>
   );
+  function Click(){
+    <Grid />
+  }
+  
 }
 export default App;
