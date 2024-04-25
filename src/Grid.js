@@ -34,10 +34,12 @@ const Grid = () => {
   ];
 
   return (
-        <div className="ag-theme-quartz" style={{ height: 600, width:900 }}>
+        <div className="ag-theme-quartz" style={{ height: 600, width:1500 }}>
       <AgGridReact
         rowData={rowData}
         columnDefs={columnDefs}
+        rowSelection={"multiple"}
+          rowMultiSelectWithClick={true}
       />
     </div>
 
