@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { listUserReducer } from "../Reducer/reducerUser";
+import { getUserReducer } from "../slice/usersSlice";
 
 export default configureStore({
     reducer:{
-        listUsers: listUserReducer
+        getUsers: getUserReducer
     },
-    middleware: (getDefultMiddleware) => getDefultMiddleware({ serializableCheck: false})
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({ serializableCheck: false })
 });
