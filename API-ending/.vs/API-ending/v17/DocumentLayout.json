@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fabia\\source\\repos\\API-ending\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0EF9AAEC-EDDB-4D0D-8CC0-3A51BDB3D226}|API-ending\\API-ending.csproj|c:\\users\\fabia\\source\\repos\\api-ending\\api-ending\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EF9AAEC-EDDB-4D0D-8CC0-3A51BDB3D226}|API-ending\\API-ending.csproj|solutionrelative:api-ending\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EF9AAEC-EDDB-4D0D-8CC0-3A51BDB3D226}|API-ending\\API-ending.csproj|c:\\users\\fabia\\source\\repos\\api-ending\\api-ending\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EF9AAEC-EDDB-4D0D-8CC0-3A51BDB3D226}|API-ending\\API-ending.csproj|solutionrelative:api-ending\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "usuario.cs",
+              "DocumentMoniker": "C:\\Users\\fabia\\source\\repos\\API-ending\\API-ending\\Entidades\\usuario.cs",
+              "RelativeDocumentMoniker": "API-ending\\Entidades\\usuario.cs",
+              "ToolTip": "C:\\Users\\fabia\\source\\repos\\API-ending\\API-ending\\Entidades\\usuario.cs",
+              "RelativeToolTip": "API-ending\\Entidades\\usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T15:32:12.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ValuesController.cs",
+              "DocumentMoniker": "C:\\Users\\fabia\\source\\repos\\API-ending\\API-ending\\Controllers\\ValuesController.cs",
+              "RelativeDocumentMoniker": "API-ending\\Controllers\\ValuesController.cs",
+              "ToolTip": "C:\\Users\\fabia\\source\\repos\\API-ending\\API-ending\\Controllers\\ValuesController.cs",
+              "RelativeToolTip": "API-ending\\Controllers\\ValuesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T15:26:50.75Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
