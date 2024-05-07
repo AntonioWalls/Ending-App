@@ -74,7 +74,7 @@ const handleGuardar = () => {
               value={user.PrimerApellido}
               onChange={(e) => setUser({ ...user, PrimerApellido: e.target.value })}
               />
-          
+
             <Form.Label>Apellido Materno</Form.Label>
             <Form.Control 
               type="text" 
@@ -84,7 +84,18 @@ const handleGuardar = () => {
               onChange={(e) => setUser({ ...user, SegundoApellido: e.target.value })}
               />
 
+            <Form.Label>Genero</Form.Label>
+            <Form.Select 
+              name="genero" 
+              value={user.Genero} 
+              onChange={(e) => setUser({...user, Genero: e.target.value == 1 ? true : false })}>
+              <option value={""} disabled>Seleccione un Genero</option>
+              <option value={1}>Masculino</option>
+              <option value={2}>Femenino</option>
+            </Form.Select>
 
+            <Form.Label>Fecha de Nacimiento</Form.Label>
+            
 
             <Form.Label>Nombre de Usuario</Form.Label>
             <Form.Control 

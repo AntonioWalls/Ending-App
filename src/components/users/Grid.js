@@ -61,7 +61,7 @@ const Grid = ({showForm, idUserEdit}) => {
 
   const handleNew = () => {
     showForm();
-     id(0);
+    id(0);
   };
 
   const handleEdit = () => {
